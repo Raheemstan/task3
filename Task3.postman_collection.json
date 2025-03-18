@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "503bdd68-5f91-4196-b0ab-b2c5083997a2",
+		"name": "Task3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21560343"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subtotal",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "destination_latitude",
+							"value": "9.3100",
+							"type": "text"
+						},
+						{
+							"key": "destination_longitude",
+							"value": "-8.8400",
+							"type": "text"
+						},
+						{
+							"key": "products[0]",
+							"value": "Laptop",
+							"type": "text"
+						},
+						{
+							"key": "products[1]",
+							"value": "Headphones",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}order/calculate",
+					"host": [
+						"{{host}}order"
+					],
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subtotal",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "destination_latitude",
+									"value": "9.3100",
+									"type": "text"
+								},
+								{
+									"key": "destination_longitude",
+									"value": "-8.8400",
+									"type": "text"
+								},
+								{
+									"key": "products[0]",
+									"value": "Laptop",
+									"type": "text"
+								},
+								{
+									"key": "products[1]",
+									"value": "Headphones",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}order/calculate",
+							"host": [
+								"{{host}}order"
+							],
+							"path": [
+								"calculate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 18 Mar 2025 20:38:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1q mod_fcgid/2.3.10-dev"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.16"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"subtotal\": \"200\",\n    \"tax_rate\": 5,\n    \"tax_amount\": 10,\n    \"discount_rate\": 10,\n    \"discount_amount\": 20,\n    \"delivery_fee\": 74.01,\n    \"delivery_distance\": 69.01,\n    \"final_amount\": 264.01\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://task3.test/api/",
+			"type": "default"
+		}
+	]
+}
